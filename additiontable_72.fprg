@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22072"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 10:31:27 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA3MjsyMDIyMjNNQVlDMDEwMTsyMDIyLTEyLTAyOzEwOjA1OjA1IEFNOzMwNDM="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA3MjsyMDIyMjNNQVlDMDEwMTsyMDIyLTEyLTAyOzEwOjMxOjI3IEFNOzI7MzE1NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This programme displays addition table from 1 to 10"/>
+            <declare name="i, n" type="Integer" array="False" size=""/>
+            <for variable="i" start="1" end="10" direction="inc" step="1">
+                <comment text="Wheni=1 n takes all values freom 1 to 10 and addition table ois displayed similarly for every i value takes n values from 1 to 10 and addition table is displayed"/>
+                <output expression="&quot;the addition table of&quot;&amp;i&amp;&quot;is&quot;" newline="True"/>
+                <for variable="n" start="1" end="10" direction="inc" step="1">
+                    <output expression="i&amp;&quot;+&quot;&amp;n&amp;&quot;=&quot;&amp;(n+i)" newline="True"/>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
