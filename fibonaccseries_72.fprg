@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22072"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 10:53:16 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA3MjsyMDIyMjNNQVlDMDEwMTsyMDIyLTEyLTAyOzEwOjMxOjQxIEFNOzMwNDI="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA3MjsyMDIyMjNNQVlDMDEwMTsyMDIyLTEyLTAyOzEwOjUzOjE2IEFNOzI7MzE1Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c, n, x" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter n&quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="a" expression="0"/>
+            <assign variable="b" expression="1"/>
+            <assign variable="x" expression="1"/>
+            <while expression="x&lt;=n">
+                <comment text="for every value of x it adds the previous number and output is diplayed"/>
+                <for variable="x" start="1" end="n" direction="inc" step="1">
+                    <assign variable="c" expression="a+b"/>
+                    <output expression="a&amp;&quot;+&quot;&amp;b&amp;&quot;=&quot;&amp;c" newline="True"/>
+                    <assign variable="a" expression="b"/>
+                    <assign variable="b" expression="c"/>
+                </for>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
