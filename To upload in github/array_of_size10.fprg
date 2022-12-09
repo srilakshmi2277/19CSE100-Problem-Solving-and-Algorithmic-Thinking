@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="srila"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 09:57:57 AM"/>
+        <attribute name="created" value="c3JpbGE7REVTS1RPUC1MMlQ3TzFJOzIwMjItMTItMDk7MDk6MTQ6NTAgQU07Mjg1NA=="/>
+        <attribute name="edited" value="c3JpbGE7REVTS1RPUC1MMlQ3TzFJOzIwMjItMTItMDk7MDk6NTc6NTcgQU07NDsyOTc5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="declare the variables"/>
+            <declare name="index" type="Integer" array="False" size=""/>
+            <declare name="number" type="Integer" array="True" size="10"/>
+            <for variable="index" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;enter the first name for number=[&quot;&amp;index&amp;&quot;]&quot;" newline="True"/>
+                <input variable="number[index]"/>
+            </for>
+            <assign variable="index" expression="0"/>
+            <output expression="&quot;array contents&quot;" newline="True"/>
+            <for variable="index" start="0" end="9" direction="inc" step="1">
+                <comment text="array contents are displayed here"/>
+                <output expression="&quot;number&quot;&amp;&quot;[&quot;&amp;index&amp;&quot;]&quot;&amp;&quot;=&quot;&amp;number[index]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

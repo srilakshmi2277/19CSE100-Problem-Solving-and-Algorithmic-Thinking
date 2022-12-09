@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="anura"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 11:33:55 PM"/>
+        <attribute name="created" value="YW51cmE7QU5VUkFHUkVERFk7MjAyMi0xMi0wOTsxMDoxNDozNiBBTTsyNjE5"/>
+        <attribute name="edited" value="YW51cmE7QU5VUkFHUkVERFk7MjAyMi0xMi0wOTsxMDoyNjozNiBBTTsxOzI3MzA="/>
+        <attribute name="edited" value="c3JpbGE7REVTS1RPUC1MMlQ3TzFJOzIwMjItMTItMDk7MTE6MzM6NTUgUE07NTsyOTgw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declaring the variables"/>
+            <declare name="number, index, maximum" type="Integer" array="False" size=""/>
+            <comment text="Entering the number of elements"/>
+            <output expression="&quot;Enter the number of array&quot;" newline="True"/>
+            <input variable="number"/>
+            <declare name="a" type="Integer" array="True" size="number"/>
+            <output expression="&quot;Enter the integer&quot;" newline="True"/>
+            <for variable="index" start="0" end="number-1" direction="inc" step="1">
+                <input variable="a[index]"/>
+            </for>
+            <assign variable="maximum" expression="a[0]"/>
+            <for variable="index" start="1" end="number-1" direction="inc" step="1">
+                <if expression="maximum&lt;a[index]">
+                    <then>
+                        <assign variable="maximum" expression="a[index]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <comment text="Displaying the largest element"/>
+            <output expression="&quot;The greatest element is&quot; &amp;maximum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

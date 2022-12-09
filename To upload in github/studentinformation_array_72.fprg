@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="srila"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 11:18:03 PM"/>
+        <attribute name="created" value="c3JpbGE7REVTS1RPUC1MMlQ3TzFJOzIwMjItMTItMDk7MTA6NDc6MDIgQU07Mjg0OQ=="/>
+        <attribute name="edited" value="c3JpbGE7REVTS1RPUC1MMlQ3TzFJOzIwMjItMTItMDk7MTE6MTg6MDMgUE07NDsyOTc1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declaring variables"/>
+            <declare name="n, i" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter the number of students&quot;" newline="True"/>
+            <input variable="n"/>
+            <comment text="Declaring the array"/>
+            <declare name="rollnumber" type="String" array="True" size="n"/>
+            <declare name="marks1" type="Integer" array="True" size="n"/>
+            <declare name="marks2" type="Integer" array="True" size="n"/>
+            <declare name="marks3" type="Integer" array="True" size="n"/>
+            <declare name="marks4" type="Integer" array="True" size="n"/>
+            <declare name="marks5" type="Integer" array="True" size="n"/>
+            <declare name="total" type="Integer" array="True" size="5"/>
+            <declare name="average" type="Integer" array="True" size="5"/>
+            <comment text="Entering the required values"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;enter student&quot;&amp;i&amp;&quot;rollnumber&quot;" newline="True"/>
+                <input variable="rollnumber[i]"/>
+                <output expression="&quot;enter marks1&quot;" newline="True"/>
+                <input variable="marks1[i]"/>
+                <output expression="&quot;enter marks2&quot;" newline="True"/>
+                <input variable="marks2[i]"/>
+                <output expression="&quot;enter marks3&quot;" newline="True"/>
+                <input variable="marks3[i]"/>
+                <output expression="&quot;enter marks4&quot;" newline="True"/>
+                <input variable="marks4[i]"/>
+                <output expression="&quot;enter marks5&quot;" newline="True"/>
+                <input variable="marks5[i]"/>
+                <comment text="Calculating total and average"/>
+                <assign variable="total[i]" expression="marks1[i]+marks2[i]+marks3[i]+marks4[i]+marks5[i]"/>
+                <assign variable="average[i]" expression="total[i]/5"/>
+            </for>
+            <comment text="Displaying the entered values by the user"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;rollnumber&quot;&amp;rollnumber[i]&amp;&quot;&quot;" newline="True"/>
+                <output expression="&quot;marks:&quot;" newline="True"/>
+                <output expression="&quot;&quot;&amp;marks1[i]&amp;&quot;,&quot;" newline="True"/>
+                <output expression="&quot;&quot;&amp;marks2[i]&amp;&quot;,&quot;" newline="True"/>
+                <output expression="&quot;&quot;&amp;marks3[i]&amp;&quot;,&quot;" newline="True"/>
+                <output expression="&quot;&quot;&amp;marks4[i]&amp;&quot;,&quot;" newline="True"/>
+                <output expression="&quot;&quot;&amp;marks5[i]&amp;&quot;,&quot;" newline="True"/>
+                <output expression="&quot;total:&quot;&amp;total[i]&amp;&quot;&quot;" newline="True"/>
+                <output expression="&quot;average:&quot;&amp;average[i]&amp;&quot;&quot;" newline="True"/>
+            </for>
+            <comment text="Ending the program"/>
+        </body>
+    </function>
+</flowgorithm>

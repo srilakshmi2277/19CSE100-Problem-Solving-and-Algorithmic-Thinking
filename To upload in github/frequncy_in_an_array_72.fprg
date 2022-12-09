@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="chennavaram arnav"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 11:57:06 PM"/>
+        <attribute name="created" value="Y2hlbm5hdmFyYW0gYXJuYXY7QVJOQVZST0ctQ0xTMlFPOzIwMjItMTItMDk7MTA6MjE6MDEgQU07NDA2NQ=="/>
+        <attribute name="edited" value="Y2hlbm5hdmFyYW0gYXJuYXY7QVJOQVZST0ctQ0xTMlFPOzIwMjItMTItMDk7MTA6MzU6MTIgQU07MTs0MTgw"/>
+        <attribute name="edited" value="SFA7REVTS1RPUC1MM1JERUtGOzIwMjItMTItMDk7MTE6MjU6MDQgQU07NzsyNjAw"/>
+        <attribute name="edited" value="c3JpbGE7REVTS1RPUC1MMlQ3TzFJOzIwMjItMTItMDk7MTE6NTc6MDYgUE07MzsyOTgw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declaring the variables"/>
+            <declare name="numbers" type="Integer" array="True" size="10"/>
+            <declare name="frequency, index, value, input" type="Integer" array="False" size=""/>
+            <for variable="index" start="0" end="9" direction="inc" step="1">
+                <comment text="Giving the input for array numbers"/>
+                <output expression="&quot;Enter &quot;&amp;index+1&amp;&quot; value&quot;" newline="True"/>
+                <input variable="input"/>
+                <assign variable="numbers[index]" expression="input"/>
+            </for>
+            <output expression="&quot;Enter the value for which the frequency should be found&quot;" newline="True"/>
+            <input variable="value"/>
+            <assign variable="frequency" expression="0"/>
+            <for variable="index" start="0" end="9" direction="inc" step="1">
+                <if expression="numbers[index]=value">
+                    <then>
+                        <assign variable="frequency" expression="frequency+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <comment text="Displaying output"/>
+            <output expression="&quot;The frequency of the given value in array is &quot;&amp;frequency" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
