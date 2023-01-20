@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22072"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-20 10:58:08 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA3MjsyMDIyMjNNQVlDMDA1MTsyMDIzLTAxLTIwOzA5OjA1OjQ1IEFNOzMwNTg="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA3MjsyMDIyMjNNQVlDMDA1MTsyMDIzLTAxLTIwOzEwOjU4OjA4IEFNOzU7MzE2OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="selection sorting for list of n elements"/>
+            <declare name="n, i, j, min" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter n&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="list" type="Integer" array="True" size="n"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <input variable="list[i]"/>
+            </for>
+            <for variable="j" start="0" end="n-1" direction="inc" step="1">
+                <for variable="i" start="j+1" end="n-1" direction="inc" step="1">
+                    <if expression="list[i]&lt;list[j]">
+                        <then>
+                            <comment text="search for the min value in the list and swap it with first element of unsortedlist"/>
+                            <assign variable="min" expression="list[i]"/>
+                            <assign variable="list[i]" expression="list[j]"/>
+                            <assign variable="list[j]" expression="min"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <comment text="showing the sorted array elements in a order"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="list[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
