@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="srila"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-27 08:49:25 PM"/>
+        <attribute name="created" value="c3JpbGE7REVTS1RPUC1MMlQ3TzFJOzIwMjMtMDEtMjc7MDg6Mzg6MTcgUE07Mjg3Ng=="/>
+        <attribute name="edited" value="c3JpbGE7REVTS1RPUC1MMlQ3TzFJOzIwMjMtMDEtMjc7MDg6NDk6MjUgUE07NTsyOTg5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="declaring the variables"/>
+            <declare name="n, factorial" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter n&quot;" newline="True"/>
+            <input variable="n"/>
+            <comment text="function called"/>
+            <assign variable="factorial" expression="fact(n)"/>
+            <output expression="factorial" newline="True"/>
+        </body>
+    </function>
+    <function name="fact" type="Integer" variable="factorial">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="factorial" type="Integer" array="False" size=""/>
+            <if expression="n==1">
+                <then>
+                    <assign variable="factorial" expression="1"/>
+                </then>
+                <else>
+                    <assign variable="factorial" expression="fact(n-1)*n"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

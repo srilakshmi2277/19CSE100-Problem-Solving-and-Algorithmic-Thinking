@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="srila"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-27 09:53:55 PM"/>
+        <attribute name="created" value="c3JpbGE7REVTS1RPUC1MMlQ3TzFJOzIwMjMtMDEtMjc7MDk6MTI6NTIgUE07Mjg2OA=="/>
+        <attribute name="edited" value="c3JpbGE7REVTS1RPUC1MMlQ3TzFJOzIwMjMtMDEtMjc7MDk6NTM6NTUgUE07MjsyOTg1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, n1, n2" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter the number of elelments for which you want to find fibonocci series&quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="n1" expression="0"/>
+            <assign variable="n2" expression="1"/>
+            <call expression="fibonocci(n,n1,n2)"/>
+        </body>
+    </function>
+    <function name="fibonocci" type="None" variable="">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+            <parameter name="n1" type="Integer" array="False"/>
+            <parameter name="n2" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="temp" type="Integer" array="False" size=""/>
+            <if expression="n&gt;0">
+                <then>
+                    <output expression="n1" newline="True"/>
+                    <assign variable="temp" expression="n1"/>
+                    <assign variable="n1" expression="n2"/>
+                    <assign variable="n2" expression="n2+temp"/>
+                    <assign variable="n" expression="n-1"/>
+                    <call expression="fibonocci(n,n1,n2)"/>
+                </then>
+                <else>
+                    <output expression="&quot;over&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
